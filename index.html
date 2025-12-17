@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="icon" href="../images/favicon-32x32.png" type="image/png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap">
+    <title>Time Tracking Dashboard</title>
+</head>
+<body>
+  <main class="dashboard-grid">
+    <article class="button-time">
+      <div class="profile-info">
+        <div class="profile-image"></div>
+        <div class="profile-text">
+          <p>Report for</p>
+          <h1>Jeremy Robson</h1>
+        </div>
+      </div>
+
+      <div class="time-filters">
+        <button class="time-filter active" id="daily">Daily</button>
+        <button class="time-filter" id="weekly">Weekly</button>
+        <button class="time-filter" id="monthly">Monthly</button>
+      </div>
+    </article>
+
+    <div class="card work-card">
+
+      <div class="card-content">
+        <div class="button-others">
+          <h2 class="text-preset5-medium">Work</h2>
+          <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg" class="icon-dots">
+            <path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/>
+          </svg>
+        </div>
+        <div class="time-data">
+          <div class="current-time text-preset3">32hrs</div>
+          <div class="previous-time text-preset6">Last Week - 36hrs</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card play-card">
+
+      <div class="card-content">
+        <div class="button-others">
+          <h2 class="text-preset5-medium">Play</h2>
+          <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg" class="icon-dots">
+            <path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/>
+          </svg>
+        </div>
+        <div class="time-data">
+          <div class="current-time text-preset3">10hrs</div>
+          <div class="previous-time text-preset6">Last Week - 36hrs</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card study-card">
+      
+      <div class="card-content">
+        <div class="button-others">
+          <h2 class="text-preset5-medium">Study</h2>
+          <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg" class="icon-dots">
+            <path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/>
+          </svg>
+        </div>
+        <div class="time-data">
+          <div class="current-time text-preset3">4hrs</div>
+          <div class="previous-time text-preset6">Last Week - 7hrs</div>
+        </div>
+      </div>
+    </div>
+
+        <div class="card exercise-card">
+      
+      <div class="card-content">
+        <div class="button-others">
+          <h2 class="text-preset5-medium">Exercise</h2>
+          <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg" class="icon-dots">
+            <path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/>
+          </svg>
+        </div>
+        <div class="time-data">
+          <div class="current-time text-preset3">4hrs</div>
+          <div class="previous-time text-preset6">Last Week - 5hrs</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card social-card">
+      
+      <div class="card-content">
+        <div class="button-others">
+          <h2 class="text-preset5-medium">Social</h2>
+          <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg" class="icon-dots">
+            <path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/>
+          </svg>
+        </div>
+        <div class="time-data">
+          <div class="current-time text-preset3">5hrs</div>
+          <div class="previous-time text-preset6">Last Week - 10hrs</div>
+        </div>
+      </div>
+    </div>
+
+   <div class="card self-care-card">
+      
+      <div class="card-content">
+        <div class="button-others">
+          <h2 class="text-preset5-medium">Self Care</h2>
+          <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg" class="icon-dots">
+            <path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/>
+          </svg>
+        </div>
+        <div class="time-data">
+          <div class="current-time text-preset3">2hrs</div>
+          <div class="previous-time text-preset6">Last Week - 2hrs</div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+  <script src="./script.js"></script>
+</body>
+</html>
