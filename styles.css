@@ -27,13 +27,24 @@ html {
     --space-500: 40px;
 }
 
-body, body::after, body::before{
-    margin:0;
-    padding:0;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body{
     font-family: 'Rubik', sans-serif;
+}
+
+.btn-reset {
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    outline: inherit;
 }
 
 .text-preset1{
@@ -97,6 +108,15 @@ body{
 .dashboard-grid{
     margin-block: var(--space-500);
     display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "profile"
+        "work"
+        "play"
+        "study"
+        "exercise"
+        "social"
+        "self-care";
     justify-content: center;
     align-items: center;
     grid-template-columns: 1fr;
@@ -118,10 +138,65 @@ body{
 }
 
 .card-content{
+    display: flex;
+    flex-direction: column;
     background-color: var(--navy-900);
     padding: var(--space-400);
+    gap: var(--space-100);
     border-radius: 15px;
     margin-top: 45px;
+}
+
+.profile-card{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 15px;
+    gap: var(--space-300);
+    background-color: var(--navy-900);
+    padding-bottom: var(--space-300);
+    grid-area: profile;
+}
+
+.profile-info{
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+    background-color: var(--purple-600);
+    padding: var(--space-400);
+    gap: var(--space-300);
+}
+
+.profile-text{
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-100);
+}
+
+.profile-label{
+    color: var(--navy-200);
+}
+
+.profile-picture{
+    width: 64px;
+    height: 64px;
+    border: 3px solid var(--white);
+    border-radius: 50%;
+}
+
+.time-filters{
+    display: flex;
+}
+
+.time-filter{
+    flex: 1;
+    text-align: center;
+    width: 100%;
+    color: var(--purple-500);
+}
+
+.time-filter.active{
+    color: var(--white);
 }
 
 .button-others{
@@ -147,16 +222,19 @@ body{
 .work-card{
     background-color: var(--orange-300);
     background-image: url('../images/icon-work.svg');
+    grid-area: work;
 }
 .play-card{
     background-color: var(--blue-300);
     background-image: url('../images/icon-play.svg');
     background-size: 90px;
+    grid-area: play;
 }
 
 .study-card{
     background-color: var(--pink-400);
     background-image: url('../images/icon-study.svg');
+    grid-area: study;
 }
 
 .exercise-card{
@@ -164,18 +242,161 @@ body{
     background-image: url('../images/icon-exercise.svg');
     background-position: right 10px top 0px;
     background-size: 80px;
-    
+    grid-area: exercise;
 }
+
 .social-card{
     background-color: var(--purple-700);
     background-image: url('../images/icon-social.svg');
     background-position: right 10px top -15px;
     background-size: 74px;
+    grid-area: social;
 }
 .self-care-card{
     background-color: var(--yellow-300);
     background-image: url('../images/icon-self-care.svg');
     background-size: 72px;
-    
+    grid-area: self-care;
+}
+
+.current-time{
+    /* text-preset3 */
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 38px;
+    letter-spacing: 0px;
+}
+
+.profile-name{
+    /* text-preset4 */
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0px;
+}
+
+@media (min-width: 767px) and (max-width: 1025px) {
+    .dashboard-grid{
+        max-width: 61.25rem;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+            "profile profile profile"
+            "work play study"
+            "exercise social self-care";
+    }
+
+    .time-data{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .current-time{
+        /* text-preset1 */
+        font-size: 56px;
+        line-height: 66px;
+        letter-spacing: 0px;
+    }
+
+    .card-content{
+        padding: var(--space-300);
+        margin-top: 32px;
+    }
+
+    .card{
+        background-position: right 8px top -8px;
+        background-size: 58px;
+    }
+
+    .play-card{
+        background-size: 66px;
+    }
+
+    .exercise-card{
+        background-position: right 10px top 0px;
+    }
+
+    .social-card{
+        background-position: right 10px top -10px;
+        background-size: 54px;
+    }
+
+    .self-care-card{
+    background-size: 53px;
+    }
+
+    .time-filters{
+        width: 55%;
+        max-width: 35rem;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 1025px) {
+    .dashboard-grid{
+        max-width: 111.5rem;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+            "profile work play study"
+            "profile exercise social self-care";
+    }
+
+    .time-data{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .current-time{
+        /* text-preset1 */
+        font-size: 56px;
+        line-height: 66px;
+        letter-spacing: 0px;
+    }
+
+    .profile-card{
+        height: 100%;
+        padding: 0;
+        overflow: hidden;
+        gap: var(--space-100);
+    }
+
+    .profile-info{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-500);
+        padding: var(--space-400);
+        flex: 1;
+    }
+
+    .time-filters{
+        display: flex;
+        flex-direction: column;
+        gap: 2.1rem;
+        width: 100%;
+        padding: var(--space-200) var(--space-400) var(--space-400) var(--space-400);
+        flex-shrink: 0;
+    }
+
+    .time-filter{
+        text-align: left;
+    }
+
+    .profile-name{
+        /* text-preset2 */
+        font-size: 40px;
+        line-height: 47px;
+    }
+
+    .profile-text{
+        gap: 0;
+    }
+
+    .card-content{
+       margin-top: 45px;
+       gap: var(--space-300);
+    }
+
+    .time-data{
+        gap: var(--space-100);
+    }
 
 }
