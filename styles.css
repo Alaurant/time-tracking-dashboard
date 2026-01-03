@@ -137,6 +137,14 @@ body{
     background-size: 78px;
 }
 
+.card:hover{
+    cursor: pointer;
+}
+
+.card:hover .card-content{
+    background-color: var(--navy-800);
+}
+
 .card-content{
     display: flex;
     flex-direction: column;
