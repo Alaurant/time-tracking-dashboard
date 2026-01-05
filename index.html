@@ -19,14 +19,14 @@
         </div>
       </div>
 
-      <div class="time-filters">
-        <button class="time-filter text-preset5-regular btn-reset" id="daily">Daily</button>
-        <button class="time-filter active text-preset5-regular btn-reset" id="weekly">Weekly</button>
-        <button class="time-filter text-preset5-regular btn-reset" id="monthly">Monthly</button>
+      <div class="time-filters" role="group" aria-label="Select timeframe">
+        <button class="time-filter text-preset5-regular" id="daily" aria-pressed="false">Daily</button>
+        <button class="time-filter active text-preset5-regular" id="weekly" aria-pressed="true">Weekly</button>
+        <button class="time-filter text-preset5-regular" id="monthly" aria-pressed="false">Monthly</button>
       </div>
     </article>
 
-    <div class="card work-card">
+    <article class="card work-card">
 
       <div class="card-content">
         <div class="button-others">
@@ -40,9 +40,9 @@
           <div id="work-prev" class="previous-time text-preset6">Last Week - 36hrs</div>
         </div>
       </div>
-    </div>
+    </article>
 
-    <div class="card play-card">
+    <article class="card play-card">
 
       <div class="card-content">
         <div class="button-others">
@@ -56,9 +56,9 @@
           <div id="play-prev" class="previous-time text-preset6">Last Week - 36hrs</div>
         </div>
       </div>
-    </div>
+    </article>
 
-    <div class="card study-card">
+    <article class="card study-card">
       
       <div class="card-content">
         <div class="button-others">
@@ -72,9 +72,9 @@
           <div id="study-prev" class="previous-time text-preset6">Last Week - 7hrs</div>
         </div>
       </div>
-    </div>
+    </article>
 
-    <div class="card exercise-card">
+    <article class="card exercise-card">
       
       <div class="card-content">
         <div class="button-others">
@@ -88,9 +88,9 @@
           <div id="exercise-prev" class="previous-time text-preset6">Last Week - 5hrs</div>
         </div>
       </div>
-    </div>
+    </article>
 
-    <div class="card social-card">
+    <article class="card social-card">
       
       <div class="card-content">
         <div class="button-others">
@@ -104,9 +104,9 @@
           <div id="social-prev" class="previous-time text-preset6">Last Week - 10hrs</div>
         </div>
       </div>
-    </div>
+    </article>
 
-   <div class="card self-care-card">
+   <article class="card self-care-card">
       
       <div class="card-content">
         <div class="button-others">
@@ -120,7 +120,7 @@
           <div id="self-care-prev" class="previous-time text-preset6">Last Week - 2hrs</div>
         </div>
       </div>
-    </div>
+    </article>
 
   </main>
   <script src="./script.js"></script>

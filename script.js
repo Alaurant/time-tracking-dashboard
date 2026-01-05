@@ -133,8 +133,12 @@ function updateTimeframe(timeframe) {
 
 timeButtons.forEach(button => {
     button.addEventListener('click', () => {
-        timeButtons.forEach(btn => btn.classList.remove('active'));
+        timeButtons.forEach(btn => {
+          btn.classList.remove('active');
+          btn.setAttribute('aria-pressed', 'false');
+        });
         button.classList.add('active');
+        button.setAttribute('aria-pressed', 'true');
         
         const clickOption = button.innerText.toLowerCase();
         updateTimeframe(clickOption);

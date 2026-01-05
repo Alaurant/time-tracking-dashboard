@@ -37,7 +37,7 @@ body{
     font-family: 'Rubik', sans-serif;
 }
 
-.btn-reset {
+/* .btn-reset {
     background: none;
     border: none;
     padding: 0;
@@ -45,7 +45,7 @@ body{
     color: inherit;
     cursor: pointer;
     outline: inherit;
-}
+} */
 
 .text-preset1{
     font-weight: 300; /* light */
@@ -197,6 +197,9 @@ body{
 }
 
 .time-filter{
+    background: none;
+    border: none;
+    padding: 0;
     flex: 1;
     text-align: center;
     width: 100%;
